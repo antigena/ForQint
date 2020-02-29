@@ -1,0 +1,52 @@
+[gd_scene load_steps=13 format=1]
+
+[ext_resource path="res://3doors.gd" type="Script" id=1]
+[ext_resource path="res://menu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://DialogParser.gd" type="Script" id=3]
+[ext_resource path="res://tileset.res" type="TileSet" id=4]
+[ext_resource path="res://Resources/gift.png" type="Texture" id=5]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Wizard1.tscn" type="PackedScene" id=7]
+[ext_resource path="res://enemy_1.tscn" type="PackedScene" id=8]
+[ext_resource path="res://enemy_2.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Dialog.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Arrow.tscn" type="PackedScene" id=11]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 27.1315, 10 )
+
+[node name="Node2D" type="Node2D"]
+
+transform/pos = Vector2( 281.737, 118.148 )
+transform/scale = Vector2( 2, 2 )
+script/script = ExtResource( 1 )
+
+[node name="Menu" parent="." instance=ExtResource( 2 )]
+
+[node name="DialogParser" type="Node" parent="."]
+
+script/script = ExtResource( 3 )
+
+[node name="Spawn" type="Position2D" parent="."]
+
+transform/pos = Vector2( -241.5, 16 )
+
+[node name="floor" type="TileMap" parent="."]
+
+mode = 0
+tile_set = ExtResource( 4 )
+cell/size = Vector2( 16, 16 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( -196625, 95, -196624, 95, -196623, 95, -196622, 95, -196621, 95, -196620, 95, -196619, 95, -196618, 95, -196617, 95, -196616, 95, -196615, 95, -196614, 95, -196613, 95, -196612, 95, -196611, 95, -196610, 95, -196609, 95, -262144, 95, -262143, 95, -262142, 95, -262141, 95, -262140, 95, -262139, 95, -262138, 95, -262137, 95, -262136, 95, -262135, 95, -262134, 95, -262133, 95, -262132, 95, -262131, 95, -262130, 95, -262129, 95, -262128, 95, -262127, 95, -262126, 95, -262125, 95, -262124, 95, -262123, 95, -262122, 95, -262121, 95, -262120, 95, -262119, 91, -262118, 95, -131089, 142, -131088, 142, -131087, 142, -131086, 142, -131085, 142, -131084, 142, -131083, 142, -131082, 142, -131081, 142, -131080, 142, -131079, 142, -131078, 142, -131077, 142, -131076, 142, -131075, 142, -131074, 142, -131073, 142, -196608, 142, -196607, 142, -196606, 142, -196605, 142, -196604, 142, -196603, 142, -196602, 142, -196601, 142, -196600, 142, -196599, 142, -196598, 142, -196597, 142, -196596, 142, -196595, 142, -196594, 142, -196593, 142, -196592, 142, -196591, 142, -196590, 142, -196589, 142, -196588, 142, -196587, 142, -196586, 142, -196585, 142, -196584, 142, -196583, 142, -196582, 142, -65553, 17, -65552, 17, -65551, 17, -65550, 17, -65549, 16, -65548, 15, -65547, 17, -
