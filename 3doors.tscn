@@ -104,4 +104,106 @@ collision/bounce = 0.0
 collision/layers = 1
 collision/mask = 1
 occluder/light_mask = 1
-tile_data = IntArray( 196616, 48, 196617, 52, 196618, 52, 196619, 53, 262152, 59, 262153, 58, 262154, 55, 262155, 66, 327688, 59, 327689, 70, 327690, 67, 327691, 66,
+tile_data = IntArray( 196616, 48, 196617, 52, 196618, 52, 196619, 53, 262152, 59, 262153, 58, 262154, 55, 262155, 66, 327688, 59, 327689, 70, 327690, 67, 327691, 66, 393224, 73, 393225, 74, 393226, 74, 393227, 78 )
+
+[node name="Coin" type="Sprite" parent="house_inside_1"]
+
+visibility/visible = false
+transform/pos = Vector2( 160.499, 80.9263 )
+transform/scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 5 )
+
+[node name="house_inside_2" type="TileMap" parent="."]
+
+visibility/visible = false
+mode = 0
+tile_set = ExtResource( 4 )
+cell/size = Vector2( 16, 16 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( 196620, 48, 196621, 49, 196622, 49, 196623, 53, 262156, 59, 262157, 58, 262158, 55, 262159, 65, 327692, 59, 327693, 70, 327694, 67, 327695, 65, 393228, 73, 393229, 74, 393230, 74, 393231, 78 )
+
+[node name="Coin" type="Sprite" parent="house_inside_2"]
+
+visibility/visible = false
+transform/pos = Vector2( 224.674, 80.9946 )
+transform/scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 5 )
+
+[node name="house_inside_3" type="TileMap" parent="."]
+
+editor/display_folded = true
+visibility/visible = false
+mode = 0
+tile_set = ExtResource( 4 )
+cell/size = Vector2( 16, 16 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( 196624, 48, 196625, 49, 196626, 49, 196627, 53, 262160, 59, 262161, 58, 262162, 55, 262163, 54, 327696, 59, 327697, 70, 327698, 67, 327699, 54, 393232, 73, 393233, 74, 393234, 74, 393235, 78 )
+
+[node name="Coin" type="Sprite" parent="house_inside_3"]
+
+visibility/visible = false
+transform/pos = Vector2( 288.292, 80.6883 )
+transform/scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 5 )
+
+[node name="Player" parent="." instance=ExtResource( 6 )]
+
+transform/pos = Vector2( -113.307, 142.218 )
+
+[node name="Wizard1" parent="." groups=[ "interactive" ] instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 315, 126.5 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+visibility/visible = false
+
+[node name="Enemies" type="Node2D" parent="." groups=[ "keeper" ]]
+
+__meta__ = { "_edit_lock_":true }
+
+[node name="Enemy1" parent="Enemies" groups=[ "enemy", "keeper" ] instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 291.5, 125.5 )
+
+[node name="Enemy2" parent="Enemies" groups=[ "enemy", "keeper" ] instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 291.5, 149.5 )
+
+[node name="Enemy3" parent="Enemies" groups=[ "enemy" ] instance=ExtResource( 8 )]
+
+transform/pos = Vector2( -98, 257 )
+
+[node name="Enemy6" parent="Enemies" groups=[ "enemy" ] instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 1, 257 )
+
+[node name="Enemy7" parent="Enemies" groups=[ "enemy" ] instance=ExtResource( 8 )]
+
+transform/pos = Vector2( -35, 194.5 )
+
+[node name="Enemy4" parent="Enemies" groups=[ "enemy", "keeper" ] instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 339.5, 149 )
+
+[node name="Enemy5" parent="Enemies" groups=[ "enemy", "keeper" ] instance=ExtResource(
