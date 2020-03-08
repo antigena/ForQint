@@ -41,4 +41,14 @@ func _fixed_process(delta):
 	var pressing = Input.is_action_pressed(my_action)
 	if(pressing and not previous_pressing):
 #		print(get_name() + ": my action is: " + my_action)
-		get_node("Button").emit_signal("pres
+		get_node("Button").emit_signal("pressed")
+	previous_pressing = pressing
+	
+func _ready():
+	# Called every time the node is added to the scene.
+	# Initialization here
+	set_fixed_process(true)
+	set_process_input(true)
+
+func _on_Continue_visibility_changed():
+	previous_pressing = false

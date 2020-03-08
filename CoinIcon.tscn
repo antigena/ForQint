@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://Resources/Coins/BIG_0000_Capa-1.png" type="Texture" id=1]
+[ext_resource path="res://Resources/Coins/BIG_0000_Sliced_1.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Coins/BIG_0000_Sliced_2.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Coins/BIG_0000_Sliced_3.png" type="Texture" id=4]
+
+[node name="Coin" type="Control"]
+
+rect/scale = Vector2( 0.75, 0.75 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 591.0
+margin/top = -5.0
+margin/right = 631.0
+margin/bottom = 35.0
+
+[node name="CompleteCoin" type="TextureFrame" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 173.0
+margin/top = 27.0
+margin/right = 255.0
+margin/bottom 
