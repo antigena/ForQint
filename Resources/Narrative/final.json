@@ -1,0 +1,238 @@
+
+{
+  "title": "final",
+  "created_at": "2017-04-20T10:05:54Z",
+  "url_key": "f9q6",
+  "updated_at": "2017-04-20T12:16:59Z",
+  "data": {
+    "optionMirroring": true,
+    "editorData": {
+      "playPoint": "tgetparentendque",
+      "textSize": 0,
+      "authorName": "Anonymous",
+      "libraryVisible": false
+    },
+    "initial": "aaasasad",
+    "allowCheckpoints": false,
+    "stitches": {
+      "agoraEstsQuaseQu": {
+        "content": [
+          "Agora, estás quase, quase nas minhas mãos!... Muahahahah!.. .*cof*, *cof*...",
+          {
+            "divert": "comoSeiQueNoSabe"
+          }
+        ]
+      },
+      "estsAGostar": {
+        "content": [
+          "Estás a gostar?...",
+          {
+            "ifConditions": [
+              {
+                "ifCondition": "life != 1"
+              }
+            ],
+            "linkPath": "atiraAMoeda",
+            "notIfConditions": null,
+            "option": "Repetir"
+          },
+          {
+            "ifConditions": [
+              {
+                "ifCondition": "life == 1"
+              }
+            ],
+            "linkPath": "agoraEstsQuaseQu",
+            "notIfConditions": null,
+            "option": "Finalizar"
+          }
+        ]
+      },
+      "noNoHFormaDePara": {
+        "content": [
+          "Não, não há forma de parar, nem de me derrotares. Podemos estar nisto toda a eternidade. Muahahahah",
+          {
+            "divert": "chegaDeConversa"
+          }
+        ]
+      },
+      "ahAhJViQueConseg": {
+        "content": [
+          "AhAh! Já vi que conseguiste chegar até mim. ",
+          {
+            "divert": "parabnsMasDaquiN"
+          }
+        ]
+      },
+      "tgetparentendque": {
+        "content": [
+          "\tget_parent().end_quest()\n\tget_parent().get_parent().gran_finale()",
+          {
+            "isEnd": true
+          },
+          {
+            "flagName": "run_script"
+          }
+        ]
+      },
+      "noNoPodeSerComoP": {
+        "content": [
+          "Não! Não pode ser! Como podes ser assim tão sabedor!...Como sabias que os eventos são independentes?! NÃO!!!!!!",
+          {
+            "divert": "tgetparentendque"
+          }
+        ]
+      },
+      "muahahaMenosUma": {
+        "content": [
+          "Muahaha! Menos uma!... ",
+          {
+            "divert": "huuummm"
+          },
+          {
+            "ifCondition": "coin_side == 1"
+          }
+        ]
+      },
+      "tgetparentStateV": {
+        "content": [
+          "\tget_parent().StateVariables[\"life\"] = str(get_parent().get_parent().get_player_life())\n\tget_parent().StateVariables[\"coin_side\"] = str(get_parent().get_parent().get_coin_side())\n\tget_parent().StateVariables[\"probability\"] = get_parent().get_parent().get_current_probability()",
+          {
+            "divert": "muahahaMenosUma"
+          },
+          {
+            "flagName": "run_script"
+          }
+        ]
+      },
+      "huuummm": {
+        "content": [
+          "Huuummm....",
+          {
+            "divert": "estsAGostar"
+          },
+          {
+            "ifCondition": "coin_side == 0"
+          }
+        ]
+      },
+      "chegaDeConversa": {
+        "content": [
+          "Chega de conversa.",
+          {
+            "divert": "atiraAMoeda"
+          }
+        ]
+      },
+      "dizmeQualAProbab": {
+        "content": [
+          "Diz-me, qual é a probabilidade de sair \"I\" no próximo lançamento?",
+          {
+            "ifConditions": null,
+            "linkPath": "ahahahahahahahEu",
+            "notIfConditions": null,
+            "option": "%%probability%%"
+          },
+          {
+            "ifConditions": null,
+            "linkPath": "noNoPodeSerComoP",
+            "notIfConditions": null,
+            "option": "1/2"
+          }
+        ]
+      },
+      "comoSeiQueNoSabe": {
+        "content": [
+          "Como sei que não sabes a resposta, vou brincar contigo um pouco...",
+          {
+            "divert": "dizmeQualAProbab"
+          }
+        ]
+      },
+      "trazesContigoAMo": {
+        "content": [
+          "Trazes contigo a moeda dos sábios. Mas não vai ser ela que te vai safar.",
+          {
+            "divert": "hUmaCertaProbabi"
+          }
+        ]
+      },
+      "ahahahahahahahEu": {
+        "content": [
+          "Ahahahahahahah!!!! Eu vi logo que não tinhas conhecimento suficiente para mim!... Agora, fica infectado para todo o sempre!....",
+          {
+            "divert": "tgetparentgetpar1"
+          }
+        ]
+      },
+      "atiraAMoeda": {
+        "content": [
+          "Atira a moeda!",
+          {
+            "divert": "tgetparentgetpar"
+          }
+        ]
+      },
+      "hUmaCertaProbabi": {
+        "content": [
+          "Há uma certa probabilidade de eu te infectar. Mas isso ia implicar algum tempo, e eu quero despachar-te o mais depressa possível.",
+          {
+            "divert": "assimVamosFazerO"
+          }
+        ]
+      },
+      "parabnsMasDaquiN": {
+        "content": [
+          "Parabéns, mas daqui não passarás! Muahahahah!",
+          {
+            "divert": "trazesContigoAMo"
+          }
+        ]
+      },
+      "aaasasad": {
+        "content": [
+          "aaasasad ...",
+          {
+            "ifConditions": null,
+            "linkPath": "ahAhJViQueConseg",
+            "notIfConditions": null,
+            "option": "aaa"
+          },
+          {
+            "pageNum": 1
+          }
+        ]
+      },
+      "tgetparentgetpar1": {
+        "content": [
+          "\tget_parent().get_parent().penalty()",
+          {
+            "isEnd": true
+          },
+          {
+            "flagName": "run_script"
+          }
+        ]
+      },
+      "assimVamosFazerO": {
+        "content": [
+          "Assim, vamos fazer o seguinte. Vamos deixar a sorte decidir. Atiramos a moeda ao ar. De cada vez que sair \"I\" perdes uma vida. ",
+          {
+            "divert": "noNoHFormaDePara"
+          }
+        ]
+      },
+      "tgetparentgetpar": {
+        "content": [
+          "\tget_parent().get_parent().spin_the_coin()",
+          {
+            "divert": "tgetparentStateV"
+          },
+          {
+            "flagName": "run_blocking_script"
+          }
+        ]
+      }
+    }
+  }
+}

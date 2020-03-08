@@ -15,3 +15,326 @@
     "initial": "ahOlJovemDeCaraT",
     "allowCheckpoints": false,
     "stitches": {
+      "emBoaVerdadeRESS": {
+        "content": [
+          "Em boa verdade, RESSONAR é um factor de risco elevado, pois há uma relação forte entre RESSONAR e estar doente.",
+          {
+            "divert": "deTodoOModoObrig"
+          }
+        ]
+      },
+      "provasteQueSabes": {
+        "content": [
+          "Provaste que sabes o que estás a fazer. Muito bem! Aqui tens a tua recompensa. Agora, de volta ao trabalho!",
+          {
+            "divert": "tgetparentgetpar1"
+          }
+        ]
+      },
+      "poisEstMuitoBem1": {
+        "content": [
+          "Pois está! Muito bem.",
+          {
+            "divert": "noNoEstEstDoente"
+          },
+          {
+            "ifCondition": "patient_health == false"
+          }
+        ]
+      },
+      "poisEstMuitoBem": {
+        "content": [
+          "Pois está! Muito bem",
+          {
+            "divert": "noNoEstEstSaudve"
+          },
+          {
+            "ifCondition": "patient_health == true"
+          }
+        ]
+      },
+      "entoAquiEstOPrxi": {
+        "content": [
+          "Então aqui está o próximo",
+          {
+            "divert": "tgetparentgetpar"
+          }
+        ]
+      },
+      "penaDavasmeBemJe": {
+        "content": [
+          "Pena. Davas-me bem jeito. Volta quando puderes ajudar.",
+          {
+            "isEnd": "true"
+          }
+        ]
+      },
+      "sHUmSenoComoHIme": {
+        "content": [
+          "Só há um senão. Como há imensa gente, o Ministério impos que não podíamos perder mais do que 15 segundos com a pessoa.",
+          {
+            "divert": "comoAindaSInexpe"
+          }
+        ]
+      },
+      "umaLuzVerdeIndic": {
+        "content": [
+          "Uma luz verde indica que, em princípio, não está contagiada. Uma luz vermelha é indício de possível contaminação",
+          {
+            "divert": "sHUmSenoComoHIme"
+          }
+        ]
+      },
+      "atravsDeUmEstudo": {
+        "content": [
+          "Através de um estudo pormenorizado da população, consegui descobrir que há quatro factores que ajudam na decisão",
+          {
+            "divert": "seTemMAISDEANOSS"
+          }
+        ]
+      },
+      "oraMuitoObrigado": {
+        "content": [
+          "Ora, muito obrigado! Foste uma preciosa ajuda!",
+          {
+            "divert": "antesDePartiresU"
+          }
+        ]
+      },
+      "maravilhaIstoMui": {
+        "content": [
+          "Maravilha. Isto é muito simples. A pessoa entra na máquina, tu vês o registo da pessoa, e depois, com a máquina, decides se pode ir, ou não.",
+          {
+            "divert": "umaLuzVerdeIndic"
+          }
+        ]
+      },
+      "comEstasVariveis": {
+        "content": [
+          "Com estas variáveis, construí esta máquina, que usa uma complexa rede de cálculos a que chamei \"rede bayesiana\".",
+          {
+            "divert": "masJDevesDeEstar"
+          }
+        ]
+      },
+      "seTemMAISDEANOSS": {
+        "content": [
+          "Se tem MAIS DE 185 ANOS, se VIAJOU para os mundos exteriores, se tem FEBRE, e se RESSONA.",
+          {
+            "divert": "comEstasVariveis"
+          }
+        ]
+      },
+      "istoQueAquiVsUma": {
+        "content": [
+          "Isto que aqui vês é uma máquina que verifica quem é um possível portador do vírus que nos aterroriza e quem não é.",
+          {
+            "divert": "atravsDeUmEstudo"
+          }
+        ]
+      },
+      "humCompreendoTal": {
+        "content": [
+          "Hum. Compreendo. Talvez não tenha feito a máquina assim tão bem.",
+          {
+            "divert": "emBoaVerdadeRESS"
+          }
+        ]
+      },
+      "antesDePartiresU": {
+        "content": [
+          "Antes de partires, uma pergunta. Consideras que RESSONAR é ou não um alto factor de risco?",
+          {
+            "ifConditions": null,
+            "linkPath": "provasteQueSabes",
+            "notIfConditions": null,
+            "option": "É"
+          },
+          {
+            "ifConditions": null,
+            "linkPath": "humCompreendoTal",
+            "notIfConditions": null,
+            "option": "Não é"
+          }
+        ]
+      },
+      "tgetparentStateV1": {
+        "content": [
+          "\tget_parent().StateVariables[\"current\"] += 1",
+          {
+            "ifConditions": [
+              {
+                "ifCondition": "current != n_patients"
+              }
+            ],
+            "linkPath": "entoAquiEstOPrxi",
+            "notIfConditions": null,
+            "option": "Loop"
+          },
+          {
+            "ifConditions": [
+              {
+                "ifCondition": "current == n_patients"
+              }
+            ],
+            "linkPath": "oraMuitoObrigado",
+            "notIfConditions": null,
+            "option": "End"
+          },
+          {
+            "flagName": "run_script"
+          }
+        ]
+      },
+      "tgetparentStateV": {
+        "content": [
+          "\tget_parent().StateVariables[\"n_patients\"] = 8\n\tget_parent().StateVariables[\"current\"] = 0",
+          {
+            "divert": "entoAquiEstOPrxi"
+          },
+          {
+            "flagName": "run_script"
+          }
+        ]
+      },
+      "vamosAIsso": {
+        "content": [
+          "Vamos a isso?",
+          {
+            "ifConditions": null,
+            "linkPath": "tgetparentStateV",
+            "notIfConditions": null,
+            "option": "Sim"
+          },
+          {
+            "ifConditions": null,
+            "linkPath": "penaDavasmeBemJe",
+            "notIfConditions": null,
+            "option": "Não"
+          }
+        ]
+      },
+      "aueresAjudarme": {
+        "content": [
+          "Queres ajudar-me?",
+          {
+            "ifConditions": null,
+            "linkPath": "maravilhaIstoMui",
+            "notIfConditions": null,
+            "option": "Sim"
+          },
+          {
+            "ifConditions": null,
+            "linkPath": "penaDavasmeBemJe",
+            "notIfConditions": null,
+            "option": "Não"
+          }
+        ]
+      },
+      "ahOlJovemDeCaraT": {
+        "content": [
+          "Ah! Olá, jovem de cara tapada, o que se compreende, com o surto que aí anda.",
+          {
+            "divert": "euSouOProfessorB"
+          },
+          {
+            "pageNum": 1
+          }
+        ]
+      },
+      "noNoEstEstDoente": {
+        "content": [
+          "Não, não está. Está doente. Percebo que ainda estás a dar os primeiros passos nisto.",
+          {
+            "divert": "tgetparentStateV1"
+          },
+          {
+            "ifCondition": "patient_health == true"
+          }
+        ]
+      },
+      "deTodoOModoObrig": {
+        "content": [
+          "De todo o modo, obrigado pela tua ajuda. Aqui tens uma recompensa pelo teu esforço.",
+          {
+            "divert": "tgetparentgetpar1"
+          }
+        ]
+      },
+      "tgetparentgetpar1": {
+        "content": [
+          "\tget_parent().get_parent().add_reward()\n\tget_parent().end_quest()",
+          {
+            "isEnd": "true"
+          },
+          {
+            "flagName": "run_script"
+          }
+        ]
+      },
+      "masJDevesDeEstar": {
+        "content": [
+          "Mas já deves de estar farto de me ouvir falar, e eu tenho imenso que fazer. ",
+          {
+            "divert": "aueresAjudarme"
+          }
+        ]
+      },
+      "noNoEstEstSaudve": {
+        "content": [
+          "Não, não está. Está saudável. Percebo que ainda estás a dar os primeiros passos nisto.",
+          {
+            "divert": "tgetparentStateV1"
+          },
+          {
+            "ifCondition": "patient_health == false"
+          }
+        ]
+      },
+      "queMeDizesProvve": {
+        "content": [
+          "Que me dizes: é provável que esteja doente ou saudável?",
+          {
+            "ifConditions": null,
+            "linkPath": "poisEstMuitoBem",
+            "notIfConditions": null,
+            "option": "Doente"
+          },
+          {
+            "ifConditions": null,
+            "linkPath": "poisEstMuitoBem1",
+            "notIfConditions": null,
+            "option": "Saudável"
+          }
+        ]
+      },
+      "tgetparentgetpar": {
+        "content": [
+          "\tget_parent().get_parent().show_next_patient()",
+          {
+            "divert": "queMeDizesProvve"
+          },
+          {
+            "flagName": "run_blocking_script"
+          }
+        ]
+      },
+      "comoAindaSInexpe": {
+        "content": [
+          "Como ainda és inexperiente, eu vou estar aqui para validar as tuas decisões.",
+          {
+            "divert": "vamosAIsso"
+          }
+        ]
+      },
+      "euSouOProfessorB": {
+        "content": [
+          "Eu sou o Professor Bayes e, como podes ver, neste momento não podia estar mais ocupado!",
+          {
+            "divert": "istoQueAquiVsUma"
+          }
+        ]
+      }
+    }
+  }
+}
