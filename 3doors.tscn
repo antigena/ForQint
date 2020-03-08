@@ -206,4 +206,95 @@ transform/pos = Vector2( -35, 194.5 )
 
 transform/pos = Vector2( 339.5, 149 )
 
-[node name="Enemy5" parent="Enemies" groups=[ "enemy", "keeper" ] instance=ExtResource(
+[node name="Enemy5" parent="Enemies" groups=[ "enemy", "keeper" ] instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 339.5, 125 )
+
+[node name="Enemy2 2" parent="Enemies" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( -144, 256 )
+can_attack = true
+
+[node name="Enemy23" parent="Enemies" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( -48, 256 )
+can_attack = true
+
+[node name="Enemy24" parent="Enemies" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 56, 256 )
+can_attack = true
+
+[node name="Enemy25" parent="Enemies" groups=[ "keeper" ] instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 316, 149 )
+can_attack = true
+
+[node name="Enemy26" parent="Enemies" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( -36, 144.5 )
+can_attack = true
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="Dialog" parent="HUD" instance=ExtResource( 10 )]
+
+visibility/visible = false
+margin/left = 320.0
+margin/top = 136.0
+margin/right = 4.0
+margin/bottom = 76.0
+
+[node name="MagicalAreaTotal" type="Node2D" parent="."]
+
+transform/pos = Vector2( 224.948, 74.0067 )
+transform/scale = Vector2( 3.02221, 0.844486 )
+__meta__ = { "_edit_lock_":true }
+
+[node name="Arrows" type="Node2D" parent="."]
+
+[node name="Arrow1" parent="Arrows" instance=ExtResource( 11 )]
+
+visibility/visible = false
+transform/pos = Vector2( 160, 40 )
+transform/scale = Vector2( 0.4, 0.4 )
+
+[node name="Arrow2" parent="Arrows" instance=ExtResource( 11 )]
+
+visibility/visible = false
+transform/pos = Vector2( 224, 40 )
+transform/scale = Vector2( 0.4, 0.4 )
+
+[node name="Arrow3" parent="Arrows" instance=ExtResource( 11 )]
+
+visibility/visible = false
+transform/pos = Vector2( 288, 40 )
+transform/scale = Vector2( 0.4, 0.4 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+transform/pos = Vector2( 384, 256 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 22 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+
+transform/pos = Vector2( 0, 22 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[connection signal="body_enter" from="Area2D" to="." method="_on_Area2D_body_enter"]
+
+
