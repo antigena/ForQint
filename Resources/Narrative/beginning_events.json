@@ -1,0 +1,15 @@
+{
+  "SceneName": "beginning",
+  "eventTarget": {
+    "Wizard4": {
+      "Start": {
+        "Name": "ohVoltasteSentim",
+        "Flag": false
+      },
+      "Repeat": {
+        "Name": "mudasteDeIdeias",
+        "Flag": "end_quest"
+      }
+    }
+  }
+}

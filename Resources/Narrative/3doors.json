@@ -1,0 +1,400 @@
+
+{
+  "data": {
+    "allowCheckpoints": false,
+    "initial": "ahDestemidoGuerr",
+    "optionMirroring": true,
+    "editorData": {
+      "textSize": 0,
+      "playPoint": "tvarExcelsGetpar",
+      "libraryVisible": false,
+      "authorName": "Anonymous"
+    },
+    "stitches": {
+      "vejoQueASorteTeA": {
+        "content": [
+          "Vejo que a sorte te acompanha! Mas será que também és portador de sabedoria?",
+          {
+            "divert": "aSorteNoTeAcompa"
+          },
+          {
+            "ifCondition": "house == player_choice"
+          }
+        ]
+      },
+      "aTuaCasaEntoAD": {
+        "content": [
+          "A tua casa é então a %d",
+          {
+            "divert": "eisTodasAsCasas"
+          },
+          {
+            "flagName": "player_choice"
+          }
+        ]
+      },
+      "tgetparentStateV": {
+        "content": [
+          "\tget_parent().StateVariables[\"player_choice\"] = 1\n\tget_parent().get_parent().show_arrow(1)",
+          {
+            "divert": "escolhesteACasaD"
+          },
+          {
+            "flagName": "run_script"
+          }
+        ]
+      },
+      "desaparecemeDaFr": {
+        "content": [
+          "Desaparece-me da frente, e não me faças mais perder tempo!",
+          {
+            "isEnd": true
+          }
+        ]
+      },
+      "tereiQueTeFazerU": {
+        "content": [
+          "Terei que te fazer um teste. Se passares, ganharás a tua recompensa. Caso falhes,  deixo-te aqui à sorte. Estás disposto a isso?",
+          {
+            "linkPath": "poisBemEstsAVerE",
+            "option": "Sim",
+            "ifConditions": null,
+            "notIfConditions": null
+          },
+          {
+            "linkPath": "desaparecemeDaFr",
+            "option": "Não",
+            "ifConditions": null,
+            "notIfConditions": null
+          },
+          {
+            "pageNum": -1
+          }
+        ]
+      },
+      "tgetparentStateV4": {
+        "content": [
+          "\tget_parent().StateVariables[\"excels\"] = \"no\"",
+          {
+            "divert": "humVejoQueAindaN"
+          },
+          {
+            "flagName": "run_script"
+          }
+        ]
+      },
+      "aoIncioAProbabil": {
+        "content": [
+          "Ao início, a probabilidade de a recompensa estar na casa que escolheste é 1/3, e de estar nas restantes duas é 2/3",
+          {
+            "divert": "masAoMostrarteUm"
+          }
+        ]
+      },
+      "tgetparentStateV3": {
+        "content": [
+          "\tget_parent().StateVariables[\"excels\"] = \"yes\"",
+          {
+            "divert": "ahVejoQueDominas"
+          },
+          {
+            "flagName": "run_script"
+          }
+        ]
+      },
+      "tvarPlayerchoice": {
+        "content": [
+          "\tvar player_choice = get_parent().StateVariables[\"player_choice\"]\n\tvar empty_house = get_parent().StateVariables[\"empty_house\"]\n\tvar free_house = 1\n\tfor idx in range(1,4):\n\t\tif(idx != player_choice and idx != empty_house):\n\t\t\tfree_house=idx\n\tget_parent().StateVariables[\"player_choice\"]=free_house\n\tget_parent().get_parent().show_arrow(free_house)",
+          {
+            "divert": "aTuaCasaEntoAD"
+          },
+          {
+            "flagName": "run_script"
+          }
+        ]
+      },
+      "tgetparentStateV2": {
+        "content": [
+          "\tget_parent().StateVariables[\"player_choice\"] = 3\n\tget_parent().get_parent().show_arrow(3)",
+          {
+            "divert": "escolhesteACasaD"
+          },
+          {
+            "flagName": "run_script"
+          }
+        ]
+      },
+      "tgetparentStateV1": {
+        "content": [
+          "\tget_parent().StateVariables[\"player_choice\"] = 2\n\tget_parent().get_parent().show_arrow(2)",
+          {
+            "divert": "escolhesteACasaD"
+          },
+          {
+            "flagName": "run_script"
+          }
+        ]
+      },
+      "ahDestemidoGuerr": {
+        "content": [
+          "Ah, destemido guerreiro! Obrigado por me libertares. És tu aquele que irá livrar a nossa aldeia do infortúnio?",
+          {
+            "linkPath": "olhandoBemParaTi",
+            "option": "Sim",
+            "ifConditions": null,
+            "notIfConditions": null
+          },
+          {
+            "linkPath": "desaparecemeDaFr",
+            "option": "Não",
+            "ifConditions": null,
+            "notIfConditions": null
+          },
+          {
+            "pageNum": 1
+          }
+        ]
+      },
+      "assimSeTrocaresA": {
+        "content": [
+          "Assim, se trocares, a tua probabilidade aumenta de 1/3 para 2/3. Este é o conhecido problema de \"Monty Hall\". ",
+          {
+            "divert": "vaiEVoltaQuandoD"
+          }
+        ]
+      },
+      "masAoMostrarteUm": {
+        "content": [
+          "Mas ao mostrar-te uma casa vazia, a probabilidade de a recompensa estar na casa que não escolheste, passa para 2/3",
+          {
+            "divert": "poisAProbabilida"
+          }
+        ]
+      },
+      "trandomizentvarE": {
+        "content": [
+          "\trandomize()\n\tvar empty_house=round(rand_range(1,3))\n\twhile(empty_house == get_parent().StateVariables[\"house\"] or empty_house == get_parent().StateVariables[\"player_choice\"]):\n\t\tempty_house = round(rand_range(1,3))\n\tget_parent().StateVariables[\"empty_house\"] = empty_house\n\tprint(\"the empty house is: \" + str(get_parent().StateVariables[\"empty_house\"]))",
+          {
+            "divert": "tgetparentgetpar"
+          },
+          {
+            "flagName": "run_script"
+          }
+        ]
+      },
+      "ahVejoQueDominas": {
+        "content": [
+          "Ah! Vejo que dominas a arte das probabilidades!",
+          {
+            "divert": "aoIncioAProbabil"
+          }
+        ]
+      },
+      "comoQueroQueTenh": {
+        "content": [
+          "Como quero que tenhas sucesso, vou mostrar-te uma casa onde não está a recompensa",
+          {
+            "divert": "trandomizentvarE"
+          }
+        ]
+      },
+      "poisBemEstsAVerE": {
+        "content": [
+          "Pois bem. Estás a ver essas 3 casas? Numa delas irei esconder a tua recompensa.",
+          {
+            "divert": "trandomizentgetp"
+          }
+        ]
+      },
+      "aSorteNoTeAcompa": {
+        "content": [
+          "A sorte não te acompanha. Mas, mais importante, serás tu portador de sabedoria?",
+          {
+            "divert": "dizmeJovemDestem"
+          },
+          {
+            "ifCondition": "house != player_choice"
+          }
+        ]
+      },
+      "humVejoQueAindaN": {
+        "content": [
+          "Hum... vejo que ainda não dominas o que é necessário para enfrentares o grande retro-virus-maladix!",
+          {
+            "divert": "aoIncioAProbabil"
+          }
+        ]
+      },
+      "tgetparentgetpar": {
+        "content": [
+          "\tget_parent().get_parent().do_magic_effect(\"MagicalAreaTotal\",50)\n\tget_parent().get_parent().show_house(get_parent().StateVariables[\"empty_house\"])",
+          {
+            "divert": "agoraPerguntoteM"
+          },
+          {
+            "flagName": "run_script"
+          }
+        ]
+      },
+      "escolhesteACasaD": {
+        "content": [
+          "Escolheste a casa %d",
+          {
+            "divert": "comoQueroQueTenh"
+          },
+          {
+            "flagName": "player_choice"
+          }
+        ]
+      },
+      "agoraEscolheUmaC": {
+        "content": [
+          "Agora, escolhe uma casa!",
+          {
+            "linkPath": "tgetparentStateV",
+            "option": "1",
+            "ifConditions": null,
+            "notIfConditions": null
+          },
+          {
+            "linkPath": "tgetparentStateV1",
+            "option": "2",
+            "ifConditions": null,
+            "notIfConditions": null
+          },
+          {
+            "linkPath": "tgetparentStateV2",
+            "option": "3",
+            "ifConditions": null,
+            "notIfConditions": null
+          }
+        ]
+      },
+      "tvarExcelsGetpar": {
+        "content": [
+          "\tvar excels = (get_parent().StateVariables[\"excels\"] == \"yes\")\n\tif(excels):\n\t\tget_parent().get_parent().add_reward()\t\n\t\tget_parent().end_quest()\n\telse:\n\t\tget_parent().get_parent().reset()",
+          {
+            "isEnd": true
+          },
+          {
+            "flagName": "run_script"
+          }
+        ]
+      },
+      "eisTodasAsCasas": {
+        "content": [
+          "Eis todas as casas!",
+          {
+            "divert": "tgetparentgetpar1"
+          }
+        ]
+      },
+      "brilhanteLevaATu": {
+        "content": [
+          "Brilhante! Leva a tua recompensa e livra a nossa aldeia do mal! ",
+          {
+            "divert": "tvarExcelsGetpar"
+          },
+          {
+            "ifCondition": "excels == yes"
+          }
+        ]
+      },
+      "tgetparentgetpar1": {
+        "content": [
+          "\tget_parent().get_parent().do_magic_effect(\"MagicalAreaTotal\",50)\n\tfor idx in range(3):\n\t\tget_parent().get_parent().show_house(idx + 1)",
+          {
+            "divert": "vejoQueASorteTeA"
+          },
+          {
+            "flagName": "run_script"
+          }
+        ]
+      },
+      "agoraPerguntoteM": {
+        "content": [
+          "Agora pergunto-te, manténs a tua escolha inicial, ou queres trocar?",
+          {
+            "linkPath": "tvarPlayerchoice",
+            "option": "Troco",
+            "ifConditions": null,
+            "notIfConditions": null
+          },
+          {
+            "linkPath": "aTuaCasaEntoAD",
+            "option": "Mantenho",
+            "ifConditions": null,
+            "notIfConditions": null
+          }
+        ]
+      },
+      "olhandoBemParaTi": {
+        "content": [
+          "Olhando bem para ti, não sei se tens o que é necessário para derrotar estes horríveis seres que nos deixam doentes.",
+          {
+            "divert": "tereiQueTeFazerU"
+          }
+        ]
+      },
+      "humVejoQueVoltas": {
+        "content": [
+          "Hum... Vejo que voltaste.",
+          {
+            "divert": "olhandoBemParaTi"
+          }
+        ]
+      },
+      "vaiEVoltaQuandoD": {
+        "content": [
+          "Vai, e volta quando dominares a arte das probabilidades",
+          {
+            "divert": "brilhanteLevaATu"
+          },
+          {
+            "ifCondition": "excels == no"
+          }
+        ]
+      },
+      "trandomizentgetp": {
+        "content": [
+          "\trandomize()\n\tget_parent().StateVariables[\"house\"]=round(rand_range(1,3))\n\tget_parent().get_parent().do_magic_effect(\"MagicalAreaTotal\", 50)\n\tget_parent().get_parent().put_coin_in_house(get_parent().StateVariables[\"house\"])\n",
+          {
+            "divert": "agoraEscolheUmaC"
+          },
+          {
+            "flagName": "run_script"
+          }
+        ]
+      },
+      "poisAProbabilida": {
+        "content": [
+          "Pois a probabilidade de estar na casa que te mostrei passa a 0",
+          {
+            "divert": "assimSeTrocaresA"
+          }
+        ]
+      },
+      "dizmeJovemDestem": {
+        "content": [
+          "Diz-me, jovem destemido, e pensa bem, há alguma diferença entre trocares ou manteres a casa?",
+          {
+            "linkPath": "tgetparentStateV3",
+            "option": "Há",
+            "ifConditions": null,
+            "notIfConditions": null
+          },
+          {
+            "linkPath": "tgetparentStateV4",
+            "option": "Não há",
+            "ifConditions": null,
+            "notIfConditions": null
+          }
+        ]
+      }
+    }
+  },
+  "updated_at": "2017-04-15T19:38:58Z",
+  "created_at": "2017-04-07T16:09:39Z",
+  "url_key": "vmv5",
+  "title": "Untitled Story"
+}

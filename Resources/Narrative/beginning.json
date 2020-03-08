@@ -1,0 +1,123 @@
+
+{
+  "title": "beginning",
+  "created_at": "2017-04-19T22:41:10Z",
+  "url_key": "8pbm",
+  "updated_at": "2017-04-19T22:49:16Z",
+  "data": {
+    "optionMirroring": true,
+    "editorData": {
+      "playPoint": "tgetparentStateV",
+      "textSize": 0,
+      "authorName": "Anonymous",
+      "libraryVisible": false
+    },
+    "initial": "ohVoltasteSentim",
+    "allowCheckpoints": false,
+    "stitches": {
+      "mudasteDeIdeias": {
+        "content": [
+          "Mudaste de ideias?",
+          {
+            "divert": "estsDispostoALiv"
+          }
+        ]
+      },
+      "tgetparentStateV": {
+        "content": [
+          "\tget_parent().end_quest()\n\tget_parent().get_parent().add_reward()",
+          {
+            "isEnd": true
+          },
+          {
+            "flagName": "run_script"
+          }
+        ]
+      },
+      "agoraVai": {
+        "content": [
+          "Agora vai!",
+          {
+            "divert": "tgetparentStateV"
+          }
+        ]
+      },
+      "escutaBemOQueTeD": {
+        "content": [
+          "Escuta bem o que te dizem, e terás sucesso! Não te esqueças também das tuas poderosas shuriken!",
+          {
+            "divert": "agoraVai"
+          }
+        ]
+      },
+      "comoDevesSaberAN": {
+        "content": [
+          "Como deves saber, a nossa aldeia foi atacada por uma praga. O impiedoso retro-virus-maladix.",
+          {
+            "divert": "estamosAFicarRed"
+          }
+        ]
+      },
+      "ohVoltasteSentim": {
+        "content": [
+          "Oh, voltaste! Sentimos tanto a tua falta",
+          {
+            "divert": "comoDevesSaberAN"
+          },
+          {
+            "pageNum": 1
+          }
+        ]
+      },
+      "semTiEstamosPerd": {
+        "content": [
+          "Sem ti estamos perdidos....",
+          {
+            "isEnd": true
+          }
+        ]
+      },
+      "estsDispostoALiv": {
+        "content": [
+          "Estás disposto a livrar a aldeia deste tirano?",
+          {
+            "ifConditions": null,
+            "linkPath": "euSabiaQuePodiaC",
+            "notIfConditions": null,
+            "option": "Sim"
+          },
+          {
+            "ifConditions": null,
+            "linkPath": "semTiEstamosPerd",
+            "notIfConditions": null,
+            "option": "Não"
+          }
+        ]
+      },
+      "aoLongoDoCaminho": {
+        "content": [
+          "Ao longo do caminho encontrarás sábios que te ajudarão e te darão o conhecimento que necessitas para derrotar o inimigo",
+          {
+            "divert": "escutaBemOQueTeD"
+          }
+        ]
+      },
+      "euSabiaQuePodiaC": {
+        "content": [
+          "Eu sabia que podia contar contigo!",
+          {
+            "divert": "aoLongoDoCaminho"
+          }
+        ]
+      },
+      "estamosAFicarRed": {
+        "content": [
+          "Estamos a ficar reduzidos a uns poucos. Já pouco podemos fazer, a não ser confiar em ti.",
+          {
+            "divert": "estsDispostoALiv"
+          }
+        ]
+      }
+    }
+  }
+}

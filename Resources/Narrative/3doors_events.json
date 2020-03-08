@@ -1,0 +1,15 @@
+{
+  "SceneName": "3doors",
+  "eventTarget": {
+    "Wizard1": {
+      "Start": {
+        "Name": "ahDestemidoGuerr",
+        "Flag": false
+      },
+      "Repeat": {
+        "Name": "humVejoQueVoltas",
+        "Flag": "end_quest"
+      }
+    }
+  }
+}
