@@ -26,4 +26,51 @@ size_flags/vertical = 2
 margin/left = 173.0
 margin/top = 27.0
 margin/right = 255.0
-margin/bottom 
+margin/bottom = 111.0
+texture = ExtResource( 1 )
+modulate = Color( 1, 1, 1, 0.501961 )
+stretch_mode = 0
+
+[node name="Part_1" type="TextureFrame" parent="."]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 173.0
+margin/top = 27.0
+margin/right = 255.0
+margin/bottom = 111.0
+texture = ExtResource( 2 )
+stretch_mode = 0
+
+[node name="Part_2" type="TextureFrame" parent="."]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 173.0
+margin/top = 27.0
+margin/right = 255.0
+margin/bottom = 111.0
+texture = ExtResource( 3 )
+stretch_mode = 0
+
+[node name="Part_3" type="TextureFrame" parent="."]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 173.0
+margin/top = 27.0
+margin/right = 255.0
+margin/bottom = 111.0
+texture = ExtResource( 4 )
+stretch_mode = 0
+
+
