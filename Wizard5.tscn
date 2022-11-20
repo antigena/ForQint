@@ -2,7 +2,7 @@
 [gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://Wizard1.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Characters/wizard3.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Characters/wizard5.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -14,7 +14,7 @@ extents = Vector2( 16, 16 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="Wizard3" type="Area2D" groups=[ "transparent" ]]
+[node name="Wizard5" type="Area2D" groups=[ "transparent" ]]
 
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
@@ -26,7 +26,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 script/script = ExtResource( 1 )
 
-[node name="Wizard3" type="Sprite" parent="."]
+[node name="Wizard5" type="Sprite" parent="."]
 
 texture = ExtResource( 2 )
 vframes = 7
