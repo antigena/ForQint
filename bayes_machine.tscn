@@ -1,0 +1,620 @@
+
+[gd_scene load_steps=20 format=1]
+
+[ext_resource path="res://bayes_machine.gd" type="Script" id=1]
+[ext_resource path="res://Resources/machine_bg.png" type="Texture" id=2]
+[ext_resource path="res://Resources/clock.png" type="Texture" id=3]
+[ext_resource path="res://Resources/scroll.png" type="Texture" id=4]
+[ext_resource path="res://faceset-box.png" type="Texture" id=5]
+[ext_resource path="res://Resources/decision/2.png" type="Texture" id=6]
+[ext_resource path="res://Resources/decision/3.png" type="Texture" id=7]
+[ext_resource path="res://Resources/decision/4.png" type="Texture" id=8]
+[ext_resource path="res://Resources/decision/5.png" type="Texture" id=9]
+[ext_resource path="res://Resources/buttons_font.fnt" type="BitmapFont" id=10]
+[ext_resource path="res://Resources/Buttons/machine_button_off.png" type="Texture" id=11]
+[ext_resource path="res://Resources/Buttons/machine_button_on.png" type="Texture" id=12]
+[ext_resource path="res://Resources/red_light_bulb.png" type="Texture" id=13]
+[ext_resource path="res://Resources/green_light_bulb.png" type="Texture" id=14]
+
+[sub_resource type="DynamicFontData" id=1]
+
+font_path = "res://Resources/PT_Sans-Web-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+
+font/size = 10
+font/use_mipmaps = false
+font/use_filter = false
+font/font = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+
+font_path = "res://Resources/CutiveMono-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+
+font/size = 12
+font/use_mipmaps = false
+font/use_filter = false
+font/font = SubResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+
+font/size = 10
+extra_spacing/bottom = -6
+font/use_mipmaps = false
+font/use_filter = false
+font/font = SubResource( 3 )
+
+[node name="TheMachine" type="Control"]
+
+rect/scale = Vector2( 2, 2 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+script/script = ExtResource( 1 )
+answer_time = 5
+
+[node name="Painel" type="TextureFrame" parent="."]
+
+rect/scale = Vector2( 3, 3 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -152.0
+margin/top = 0.0
+margin/right = 104.0
+margin/bottom = 85.0
+texture = ExtResource( 2 )
+stretch_mode = 0
+
+[node name="clock" type="TextureFrame" parent="Painel"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 118.0
+margin/top = 54.0
+margin/right = 134.0
+margin/bottom = 70.0
+texture = ExtResource( 3 )
+stretch_mode = 0
+
+[node name="time_left" type="Label" parent="Painel/clock"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -2.0
+margin/top = 1.0
+margin/right = 18.0
+margin/bottom = 16.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "5"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="papyrus" type="TextureFrame" parent="Painel"]
+
+rect/scale = Vector2( 0.3, 0.3 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 45.0
+margin/top = -3.0
+margin/right = 301.0
+margin/bottom = 278.0
+texture = ExtResource( 4 )
+stretch_mode = 0
+
+[node name="TextureFrame" type="TextureFrame" parent="Painel/papyrus"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 70.0
+margin/top = 58.0
+margin/right = 118.0
+margin/bottom = 106.0
+texture = ExtResource( 5 )
+stretch_mode = 0
+
+[node name="pictures" type="Control" parent="Painel/papyrus"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 75.0
+margin/top = 63.0
+margin/right = 115.0
+margin/bottom = 103.0
+
+[node name="picture1" type="TextureFrame" parent="Painel/papyrus/pictures"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 41.0
+texture = ExtResource( 6 )
+stretch_mode = 0
+
+[node name="picture2" type="TextureFrame" parent="Painel/papyrus/pictures"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 41.0
+texture = ExtResource( 7 )
+stretch_mode = 0
+
+[node name="picture3" type="TextureFrame" parent="Painel/papyrus/pictures"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 41.0
+texture = ExtResource( 8 )
+stretch_mode = 0
+
+[node name="picture4" type="TextureFrame" parent="Painel/papyrus/pictures"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 41.0
+texture = ExtResource( 9 )
+stretch_mode = 0
+
+[node name="lbl_case" type="Label" parent="Painel/papyrus"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 0
+size_flags/vertical = 0
+margin/left = 124.0
+margin/top = 60.0
+margin/right = 164.0
+margin/bottom = 74.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.734375, 0.421692, 0.421692, 1 )
+text = "caso:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="case" type="Label" parent="Painel/papyrus"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 155.0
+margin/top = 60.0
+margin/right = 195.0
+margin/bottom = 74.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.734375, 0.421692, 0.421692, 1 )
+text = "#123"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lbl_id" type="Label" parent="Painel/papyrus"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 124.0
+margin/top = 75.0
+margin/right = 164.0
+margin/bottom = 89.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.734375, 0.421692, 0.421692, 1 )
+text = "id:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="id" type="Label" parent="Painel/papyrus"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 156.0
+margin/top = 75.0
+margin/right = 196.0
+margin/bottom = 89.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.734375, 0.421692, 0.421692, 1 )
+text = "abc12"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lbl_age" type="Label" parent="Painel/papyrus"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 124.0
+margin/top = 89.0
+margin/right = 164.0
+margin/bottom = 103.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.734375, 0.421692, 0.421692, 1 )
+text = "idade:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="age" type="Label" parent="Painel/papyrus"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 154.0
+margin/top = 89.0
+margin/right = 196.0
+margin/bottom = 103.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.734375, 0.421692, 0.421692, 1 )
+text = "55"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="description" type="Label" parent="Painel/papyrus"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 72.0
+margin/top = 100.0
+margin/right = 197.0
+margin/bottom = 232.0
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.734375, 0.421692, 0.421692, 1 )
+autowrap = true
+percent_visible = 1.0
+lines_skipped = -1
+max_lines_visible = -1
+
+[node name="button_1" type="Control" parent="Painel" groups=[ "machine_button" ]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 115.0
+margin/top = 20.0
+margin/right = 198.0
+margin/bottom = 31.0
+__meta__ = { "_edit_group_":true }
+
+[node name="label1" type="Label" parent="Painel/button_1"]
+
+rect/scale = Vector2( 0.15, 0.2 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -6.0
+margin/top = 1.0
+margin/right = 60.0
+margin/bottom = 31.0
+custom_fonts/font = ExtResource( 10 )
+text = "(b)"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="button" type="TextureButton" parent="Painel/button_1"]
+
+rect/scale = Vector2( 0.5, 0.5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 5.0
+margin/top = 0.0
+margin/right = 21.0
+margin/bottom = 16.0
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 11 )
+textures/pressed = ExtResource( 12 )
+
+[node name="label" type="Label" parent="Painel/button_1"]
+
+rect/scale = Vector2( 0.15, 0.2 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 15.0
+margin/top = 1.0
+margin/right = 367.0
+margin/bottom = 31.0
+custom_fonts/font = ExtResource( 10 )
+text = "Mais de 185 anos"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="button_2" type="Control" parent="Painel" groups=[ "machine_button" ]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 115.0
+margin/top = 27.0
+margin/right = 198.0
+margin/bottom = 38.0
+__meta__ = { "_edit_group_":true }
+
+[node name="label2" type="Label" parent="Painel/button_2"]
+
+rect/scale = Vector2( 0.15, 0.2 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -6.0
+margin/top = 1.0
+margin/right = 60.0
+margin/bottom = 31.0
+custom_fonts/font = ExtResource( 10 )
+text = "(c)"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="button" type="TextureButton" parent="Painel/button_2"]
+
+rect/scale = Vector2( 0.5, 0.5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 5.0
+margin/top = 0.0
+margin/right = 21.0
+margin/bottom = 16.0
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 11 )
+textures/pressed = ExtResource( 12 )
+
+[node name="label" type="Label" parent="Painel/button_2"]
+
+rect/scale = Vector2( 0.15, 0.2 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 15.0
+margin/top = 1.0
+margin/right = 345.0
+margin/bottom = 31.0
+custom_fonts/font = ExtResource( 10 )
+text = "Viajou "
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="button_3" type="Control" parent="Painel" groups=[ "machine_button" ]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 115.0
+margin/top = 34.0
+margin/right = 198.0
+margin/bottom = 45.0
+__meta__ = { "_edit_group_":true }
+
+[node name="label3" type="Label" parent="Painel/button_3"]
+
+rect/scale = Vector2( 0.15, 0.2 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -6.0
+margin/top = 1.0
+margin/right = 60.0
+margin/bottom = 31.0
+custom_fonts/font = ExtResource( 10 )
+text = "(d)"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="button" type="TextureButton" parent="Painel/button_3"]
+
+rect/scale = Vector2( 0.5, 0.5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 5.0
+margin/top = 0.0
+margin/right = 21.0
+margin/bottom = 16.0
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 11 )
+textures/pressed = ExtResource( 12 )
+
+[node name="label" type="Label" parent="Painel/button_3"]
+
+rect/scale = Vector2( 0.15, 0.2 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 15.0
+margin/top = 1.0
+margin/right = 345.0
+margin/bottom = 31.0
+custom_fonts/font = ExtResource( 10 )
+text = "Tem febre"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="button_4" type="Control" parent="Painel" groups=[ "machine_button" ]]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 115.0
+margin/top = 41.0
+margin/right = 198.0
+margin/bottom = 52.0
+__meta__ = { "_edit_group_":true }
+
+[node name="label4" type="Label" parent="Painel/button_4"]
+
+rect/scale = Vector2( 0.15, 0.2 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -6.0
+margin/top = 1.0
+margin/right = 60.0
+margin/bottom = 31.0
+custom_fonts/font = ExtResource( 10 )
+text = "(a)"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="button" type="TextureButton" parent="Painel/button_4"]
+
+rect/scale = Vector2( 0.5, 0.5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 5.0
+margin/top = 0.0
+margin/right = 21.0
+margin/bottom = 16.0
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 11 )
+textures/pressed = ExtResource( 12 )
+
+[node name="label" type="Label" parent="Painel/button_4"]
+
+rect/scale = Vector2( 0.15, 0.2 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 15.0
+margin/top = 1.0
+margin/right = 345.0
+margin/bottom = 31.0
+custom_fonts/font = ExtResource( 10 )
+text = "Ressona"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="red_light_bulb" type="TextureFrame" parent="Painel"]
+
+rect/scale = Vector2( 0.3, 0.3 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 156.0
+margin/top = 45.0
+margin/right = 256.0
+margin/bottom = 145.0
+texture = ExtResource( 13 )
+stretch_mode = 0
+
+[node name="green_light_bulb" type="TextureFrame" parent="Painel"]
+
+rect/scale = Vector2( 0.3, 0.3 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 156.0
+margin/top = 45.0
+margin/right = 256.0
+margin/bottom = 145.0
+texture = ExtResource( 14 )
+stretch_mode = 0
+
+[connection signal="toggled" from="Painel/button_1/button" to="." method="_on_button_toggled"]
+
+[connection signal="toggled" from="Painel/button_2/button" to="." method="_on_button_toggled"]
+
+[connection signal="toggled" from="Painel/button_3/button" to="." method="_on_button_toggled"]
+
+[connection signal="toggled" from="Painel/button_4/button" to="." method="_on_button_toggled"]
+

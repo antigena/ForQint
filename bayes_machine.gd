@@ -179,4 +179,5 @@ func _ready():
 
 #	show_next_patient()
 
-func _on_bu
+func _on_button_toggled( pressed ):
+	check_buttons()
