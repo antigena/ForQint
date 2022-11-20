@@ -2,7 +2,7 @@
 
 [ext_resource path="res://endtitles.gd" type="Script" id=1]
 [ext_resource path="res://Resources/scroll.png" type="Texture" id=2]
-[ext_resource path="res://Resources/text_font_15.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://Resources/buttons_font_20.fnt" type="BitmapFont" id=3]
 [ext_resource path="res://AnswerButton.tscn" type="PackedScene" id=4]
 
 [sub_resource type="StyleBoxFlat" id=1]
@@ -18,9 +18,9 @@ border_size = 0
 border_blend = true
 draw_bg = true
 
-[node name="Credits" type="CanvasLayer"]
+[node name="EndTitles" type="CanvasLayer"]
 
-layer = 3
+layer = 2
 offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
@@ -28,6 +28,7 @@ scale = Vector2( 1, 1 )
 [node name="Panel" type="Panel" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -60,14 +61,13 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 224.0
-margin/top = 128.0
-margin/right = 624.0
-margin/bottom = 464.0
+margin/left = 246.0
+margin/top = 95.0
+margin/right = 614.0
+margin/bottom = 495.0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Jogo desenvolvido para a MOSTRA-UP 2017, no âmbito do projecto NanoSTIMA\n\nPROGRAMAÇÃO | Bruno Miguel Oliveira\n\nDESENHO DOS NÍVEIS | Miguel Bruno Oliveira\n\nARTE | [Pixel-boy] | Lexassets | Oliveira Bruno Miguel\n\nTEXTOS | Miguel Oliveira Bruno\n\nCOORDENAÇÃO CIENTÍFICA | Pedro Pereira Rodrigues\n\nPara mais informações, contactar os elementos presentes na feira.\n\nNanoSTIMA, BioData, Cintesis, 2017"
-align = 1
+text = "Parabéns! Conseguiste derrotar o retro-virus-maladix e libertar a aldeia do mal.\nCom este pequeno jogo quisemos mostrar-te as ferramentas que usamos todos os dias para tentar fazer o mesmo: salvar vidas.\nFerramentas como a estatística, probabilidades e outras um pouco mais complexas, como as redes bayeseanas, são usadas e criadas todos os dias para ajudar aqueles que precisam de tomar decisões, e causar diferença no bem-estar dos pacientes e de todos nós.\nSe quiseres saber mais um pouco sobre o que fazemos,  pergunta-nos. O gosto é nosso."
 autowrap = true
 percent_visible = 1.0
 lines_skipped = 0
@@ -75,9 +75,9 @@ max_lines_visible = -1
 
 [node name="Continue" parent="Panel" instance=ExtResource( 4 )]
 
-margin/left = 544.0
-margin/top = 490.0
-margin/right = 624.0
-margin/bottom = 512.0
+margin/left = 534.0
+margin/top = 483.0
+margin/right = 614.0
+margin/bottom = 505.0
 
 
