@@ -116,4 +116,10 @@ func _ready():
 	# Initialization here
 	randomize()
 	
-	var node = get_paren
+	var node = get_parent()
+	while(!node.has_node("Player")):
+		node = node.get_parent()
+	player = node.get_node("Player")
+	
+	self.connect("body_enter", self, "_on_body_enter")
+	set_fixed_process(true)
