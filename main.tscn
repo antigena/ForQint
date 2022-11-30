@@ -1,0 +1,50 @@
+[gd_scene load_steps=12 format=1]
+
+[ext_resource path="res://main.gd" type="Script" id=1]
+[ext_resource path="res://menu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://DialogParser.gd" type="Script" id=3]
+[ext_resource path="res://tileset.res" type="TileSet" id=4]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Wizard4.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Dialog.tscn" type="PackedScene" id=7]
+[ext_resource path="res://enemy_1.tscn" type="PackedScene" id=8]
+[ext_resource path="res://enemy_2.tscn" type="PackedScene" id=9]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 24 )
+
+[node name="Main" type="Node2D"]
+
+transform/scale = Vector2( 2, 2 )
+script/script = ExtResource( 1 )
+
+[node name="Menu" parent="." instance=ExtResource( 2 )]
+
+[node name="DialogParser" type="Node" parent="."]
+
+script/script = ExtResource( 3 )
+
+[node name="floor" type="TileMap" parent="."]
+
+mode = 0
+tile_set = ExtResource( 4 )
+cell/size = Vector2( 16, 16 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( -262160, 95, -262159, 95, -262158, 95, -262157, 95, -262156, 95, -262155, 95, -262154, 95, -262153, 95, -262152, 95, -262151, 91, -262150, 91, -262149, 95, -262148, 95, -262147, 95, -262146, 95, -262145, 95, -327680, 95, -327679, 95, -327678, 95, -327677, 95, -327676, 91, -327675, 91, -327674, 95, -327673, 95, -327672, 95, -327671, 95, -327670, 95, -327669, 91, -327668, 95, -327667, 95, -327666, 95, -327665, 95, -327664, 95, -196624, 142, -196623, 142, -196622, 142, -196621, 142, -196620, 142, -196619, 142, -196618, 142, -196617, 142, -196616, 142, -196615, 142, -196614, 142, -196613, 142, -196612, 142, -196611, 142, -196610, 142, -196609, 142, -262144, 142, -262143, 142, -262142, 142, -262141, 142, -262140, 142, -262139, 142, -262138, 142, -262137, 142, -262136, 142, -262135, 142, -262134, 142,

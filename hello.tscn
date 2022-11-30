@@ -1,0 +1,35 @@
+
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://labelinc.gd" type="Script" id=1]
+
+[sub_resource type="DynamicFontData" id=1]
+
+font_path = "res://PT_Sans-Web-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+
+font/size = 30
+font/use_mipmaps = false
+font/use_filter = false
+font/font = SubResource( 1 )
+
+[node name="Label" type="Label"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 418.0
+margin/top = 209.0
+margin/right = 579.0
+margin/bottom = 248.0
+custom_fonts/font = SubResource( 2 )
+text = "0"
+align = 2
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+script/script = ExtResource( 1 )
+
