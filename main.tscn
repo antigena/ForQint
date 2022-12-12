@@ -89,4 +89,105 @@ tile_data = IntArray( -65548, 137, -65543, 137, 65532, 135, 262140, 137, 458739,
 
 transform/pos = Vector2( -1.43691, 422.483 )
 
-[node name="Wizard4" 
+[node name="Wizard4" parent="." groups=[ "interactive" ] instance=ExtResource( 6 )]
+
+transform/pos = Vector2( -5.49689, 325.294 )
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="Dialog" parent="HUD" instance=ExtResource( 7 )]
+
+visibility/visible = false
+margin/left = 320.0
+margin/top = 136.0
+margin/right = 4.0
+margin/bottom = 76.0
+
+[node name="Blockage" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( 16.455, 295.715 )
+transform/scale = Vector2( 0.487209, 0.754088 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.86918, 0, 0, 2.8566, -0.815289, 1.44853 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blockage"]
+
+transform/pos = Vector2( -0.815289, 1.44853 )
+transform/scale = Vector2( 2.86918, 2.8566 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Spawn" type="Position2D" parent="."]
+
+transform/pos = Vector2( 10.5263, 422.161 )
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Enemy1" parent="Enemies" groups=[ "keeper" ] instance=ExtResource( 8 )]
+
+transform/pos = Vector2( -16, 40 )
+
+[node name="Enemy2" parent="Enemies" groups=[ "keeper" ] instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 8, 64 )
+
+[node name="Enemy3" parent="Enemies" groups=[ "keeper" ] instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 32, 40 )
+
+[node name="Enemy4" parent="Enemies" groups=[ "keeper" ] instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 96, -8 )
+
+[node name="Enemy5" parent="Enemies" groups=[ "keeper" ] instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 152, 8 )
+
+[node name="Enemy2 2" parent="Enemies" groups=[ "keeper" ] instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 8, 40 )
+can_attack = true
+
+[node name="Enemy23" parent="Enemies" groups=[ "keeper" ] instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 200, -8 )
+can_attack = true
+
+[node name="NextLevel" type="Area2D" parent="."]
+
+transform/pos = Vector2( 256, 0 )
+transform/scale = Vector2( 0.5, 1 )
+input/pickable = true
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextLevel"]
+
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+[connection signal="body_enter" from="NextLevel" to="." method="_on_NextLevel_body_enter"]
+
+
