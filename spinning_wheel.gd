@@ -97,4 +97,18 @@ func reset(key):
 	hide_all()
 	if(key):
 		random_key_position()
-	random_initial
+	random_initial_rotation(key)
+	
+func _ready():
+	# Called every time the node is added to the scene.
+	# Initialization here
+	set_fixed_process(true)
+#	set_process_input(true)
+	
+	hide_all()
+	rotating = false
+	
+#	reset(true)
+	
+
+

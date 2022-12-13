@@ -1,0 +1,93 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://spinning_wheel.gd" type="Script" id=1]
+[ext_resource path="res://Resources/wheel/g6127.png" type="Texture" id=2]
+[ext_resource path="res://Resources/gold_key.png" type="Texture" id=3]
+[ext_resource path="res://Resources/gold_coin.png" type="Texture" id=4]
+[ext_resource path="res://Resources/wheel/g6131.png" type="Texture" id=5]
+
+[node name="Node2D" type="Node2D"]
+
+script/script = ExtResource( 1 )
+
+[node name="Wheel" type="Sprite" parent="."]
+
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="gold_key_0" type="Sprite" parent="Wheel" groups=[ "wheel_item" ]]
+
+transform/pos = Vector2( 145.898, -84.2964 )
+transform/rot = -57.6809
+texture = ExtResource( 3 )
+
+[node name="gold_coin_0" type="Sprite" parent="Wheel" groups=[ "wheel_item" ]]
+
+transform/pos = Vector2( 145.898, -84.2964 )
+texture = ExtResource( 4 )
+
+[node name="gold_key_1" type="Sprite" parent="Wheel" groups=[ "wheel_item" ]]
+
+transform/pos = Vector2( 148.059, 88.6195 )
+transform/rot = -130.935
+texture = ExtResource( 3 )
+
+[node name="gold_coin_1" type="Sprite" parent="Wheel" groups=[ "wheel_item" ]]
+
+transform/pos = Vector2( 148.059, 88.6195 )
+texture = ExtResource( 4 )
+
+[node name="gold_key_2" type="Sprite" parent="Wheel" groups=[ "wheel_item" ]]
+
+transform/pos = Vector2( 8.64578, 170.755 )
+transform/rot = 180.204
+texture = ExtResource( 3 )
+
+[node name="gold_coin_2" type="Sprite" parent="Wheel" groups=[ "wheel_item" ]]
+
+transform/pos = Vector2( 8.64578, 170.755 )
+texture = ExtResource( 4 )
+
+[node name="gold_key_3" type="Sprite" parent="Wheel" groups=[ "wheel_item" ]]
+
+transform/pos = Vector2( -149.14, 85.3774 )
+transform/rot = 117.192
+texture = ExtResource( 3 )
+
+[node name="gold_coin_3" type="Sprite" parent="Wheel" groups=[ "wheel_item" ]]
+
+transform/pos = Vector2( -149.14, 85.3774 )
+texture = ExtResource( 4 )
+
+[node name="gold_key_4" type="Sprite" parent="Wheel" groups=[ "wheel_item" ]]
+
+transform/pos = Vector2( -144.817, -83.2155 )
+transform/rot = 61.9547
+texture = ExtResource( 3 )
+
+[node name="gold_coin_4" type="Sprite" parent="Wheel" groups=[ "wheel_item" ]]
+
+transform/pos = Vector2( -144.817, -83.2155 )
+texture = ExtResource( 4 )
+
+[node name="gold_key_5" type="Sprite" parent="Wheel" groups=[ "wheel_item" ]]
+
+transform/pos = Vector2( -8.64578, -167.512 )
+texture = ExtResource( 3 )
+
+[node name="gold_coin_5" type="Sprite" parent="Wheel" groups=[ "wheel_item" ]]
+
+transform/pos = Vector2( -8.64578, -167.512 )
+texture = ExtResource( 4 )
+
+[node name="Pin" type="Node2D" parent="."]
+
+transform/pos = Vector2( 124.234, -102.837 )
+__meta__ = { "_edit_group_":true }
+
+[node name="Sprite" type="Sprite" parent="Pin"]
+
+texture = ExtResource( 5 )
+offset = Vector2( -5, 8 )
+
+
