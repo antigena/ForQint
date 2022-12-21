@@ -1,0 +1,10 @@
+[gd_scene load_steps=12 format=1]
+
+[ext_resource path="res://the_roulette.gd" type="Script" id=1]
+[ext_resource path="res://menu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://DialogParser.gd" type="Script" id=3]
+[ext_resource path="res://tileset.res" type="TileSet" id=4]
+[ext_resource path="res://enemy_2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Resources/wheel/g6127.png" type="Texture" id=7]
+[ext_resource path="res://spinning_w

@@ -162,4 +162,85 @@ transform/pos = Vector2( 0, 280 )
 mode = 0
 tile_set = ExtResource( 4 )
 cell/size = Vector2( 16, 16 )
-cell/quadrant_size =
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( -196597, 137, -131065, 137, -65522, 47, 65543, 46, 65550, 137, 196616, 137, 262157, 46, 327694, 130, 327696, 130, 393219, 122, 393230, 131, 393232, 131, 458755, 122, 458766, 132, 458768, 132, 589817, 121, 589818, 121, 589819, 121, 589820, 121, 589821, 121, 589822, 121, 589823, 121, 524288, 121, 524289, 121, 524290, 121, 524291, 117, 524302, 130, 524304, 130, 589838, 131, 589840, 131, 655374, 132, 655376, 132, 786428, 137, 851961, 137, 917498, 137, 983036, 137, 1048569, 137, 1114116, 136, 1114120, 135, 1114124, 135, 1179654, 134, 1179658, 136, 1179662, 134 )
+
+[node name="Smoke" parent="." instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 24, -2 )
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="TheMachine" parent="HUD" instance=ExtResource( 10 )]
+
+visibility/visible = false
+answer_time = 15
+
+[node name="Dialog" parent="HUD" instance=ExtResource( 11 )]
+
+visibility/visible = false
+margin/left = 320.0
+margin/top = 136.0
+margin/right = 4.0
+margin/bottom = 76.0
+
+[node name="light_bulbs" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="green" type="Sprite" parent="light_bulbs"]
+
+transform/pos = Vector2( 110.5, 105 )
+transform/scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 12 )
+
+[node name="red" type="Sprite" parent="light_bulbs"]
+
+transform/pos = Vector2( 110.5, 105 )
+transform/scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 13 )
+
+[node name="Wizard3" parent="." groups=[ "interactive" ] instance=ExtResource( 14 )]
+
+transform/pos = Vector2( 94, 112 )
+
+[node name="Spawn" type="Position2D" parent="."]
+
+transform/pos = Vector2( 8.5, 273.5 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+transform/pos = Vector2( 280, 143.5 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[connection signal="body_enter" from="Area2D" to="." method="_on_Area2D_body_enter"]
+
+
