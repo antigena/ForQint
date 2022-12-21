@@ -63,4 +63,103 @@ collision/use_kinematic = false
 collision/friction = 1.0
 collision/bounce = 0.0
 collision/layers = 1
-collision/ma
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( -131074, 21, -131073, 21, -196597, 89, -196596, 96, -131061, 92, -131060, 97, -1, 89, -65536, 99, -65535, 99, -65534, 99, -65533, 96, -65525, 93, -65524, 98, 65535, 92, 0, 79, 1, 80, 2, 81, 3, 97, 131071, 92, 65536, 84, 65537, 83, 65538, 82, 65539, 97, 65547, 89, 65548, 96, 196607, 92, 131072, 85, 131073, 86, 131074, 87, 131075, 97, 131083, 92, 131084, 97, 262143, 92, 196608, 88, 196609, 91, 196610, 88, 196611, 97, 196619, 93, 196620, 98, 327679, 93, 262144, 100, 262145, 101, 262146, 102, 262147, 98, 327680, 105, 327681, 104, 327682, 103, 393216, 106, 393217, 107, 393218, 108, 393221, 125, 393222, 126, 393223, 127, 720900, 1, 720904, 1, 720908, 1 )
+
+[node name="top" type="TileMap" parent="."]
+
+mode = 0
+tile_set = ExtResource( 4 )
+cell/size = Vector2( 16, 16 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( 1, 124, 327685, 133 )
+
+[node name="PatientsUp" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="Wizard9 5" parent="PatientsUp" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 24, 60 )
+
+[node name="Wizard9 4" parent="PatientsUp" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 24, 70 )
+
+[node name="Wizard9 3" parent="PatientsUp" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 24, 80 )
+
+[node name="Wizard9 2" parent="PatientsUp" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 24, 90 )
+
+[node name="Wizard9" parent="PatientsUp" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 24, 100 )
+
+[node name="Wizard23" parent="PatientsUp" instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 24, 110 )
+
+[node name="PatientsLeft" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="Wizard1" parent="PatientsLeft" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( -56, 120 )
+
+[node name="Wizard2" parent="PatientsLeft" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( -46, 120 )
+
+[node name="Wizard7" parent="PatientsLeft" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 14, 120 )
+
+[node name="Wizard3" parent="PatientsLeft" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( -6, 120 )
+
+[node name="Wizard4" parent="PatientsLeft" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -36, 120 )
+
+[node name="Wizard5" parent="PatientsLeft" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -16, 120 )
+
+[node name="Wizard6" parent="PatientsLeft" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 4, 120 )
+
+[node name="Wizard8" parent="PatientsLeft" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 24, 120 )
+
+[node name="Wizard2 2" parent="PatientsLeft" instance=ExtResource( 7 )]
+
+transform/pos = Vector2( -26, 120 )
+
+[node name="Player" parent="." instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 0, 280 )
+
+[node name="fence" type="TileMap" parent="."]
+
+mode = 0
+tile_set = ExtResource( 4 )
+cell/size = Vector2( 16, 16 )
+cell/quadrant_size =
