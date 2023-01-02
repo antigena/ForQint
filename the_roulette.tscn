@@ -125,4 +125,115 @@ collision/bounce = 0.0
 collision/layers = 1
 collision/mask = 1
 occluder/light_mask = 1
-tile_data = IntArray( -458757, 88, -327685, 136, -327665, 140, -196613, 88, -262129, 139, -196593, 140, -65541, 134, -131057, 140, -65534, 109, -65533, 110, 65531, 88, 2, 112, 3, 111, 19, 137, 65538, 113, 65539, 114, 65541, 138, 196603, 136, 131078, 137, 196617, 47, 196624, 3, 327675, 88, 262152, 137, 327685, 137, 327690, 137, 327692, 46, 327701, 130, 327706, 130, 458747, 134, 393237, 131, 393242, 131, 458773, 132, 458778, 132, 589819, 88, 720891, 136, 720901, 134, 851963, 88, 786433, 0, 786439, 135, 786
+tile_data = IntArray( -458757, 88, -327685, 136, -327665, 140, -196613, 88, -262129, 139, -196593, 140, -65541, 134, -131057, 140, -65534, 109, -65533, 110, 65531, 88, 2, 112, 3, 111, 19, 137, 65538, 113, 65539, 114, 65541, 138, 196603, 136, 131078, 137, 196617, 47, 196624, 3, 327675, 88, 262152, 137, 327685, 137, 327690, 137, 327692, 46, 327701, 130, 327706, 130, 458747, 134, 393237, 131, 393242, 131, 458773, 132, 458778, 132, 589819, 88, 720891, 136, 720901, 134, 851963, 88, 786433, 0, 786439, 135, 786441, 0, 851973, 143, 851974, 147, 851976, 144, 983035, 134, 917509, 146, 917512, 145, 983041, 4, 983042, 5, 983043, 5, 983044, 5, 983045, 5, 983046, 5, 983047, 5, 983048, 5, 983049, 5, 983050, 5, 983051, 5, 983052, 5, 983053, 8, 1114107, 88, 1048577, 10, 1048578, 11, 1048579, 11, 1048580, 11, 1048581, 11, 1048582, 11, 1048583, 11, 1048584, 11, 1048585, 11, 1048586, 11, 1048587, 11, 1048588, 11, 1048589, 11 )
+
+[node name="Keepers" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="keeper1" parent="Keepers" groups=[ "keeper" ] instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 64, 138.5 )
+can_attack = true
+
+[node name="keeper2" parent="Keepers" groups=[ "keeper" ] instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 96, 138.5 )
+can_attack = true
+
+[node name="keeper3" parent="Keepers" groups=[ "keeper" ] instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 128, 138.5 )
+can_attack = true
+
+[node name="keeper4" parent="Keepers" groups=[ "keeper" ] instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 160, 138.5 )
+can_attack = true
+
+[node name="keeper5" parent="Keepers" groups=[ "keeper" ] instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 144, 162.5 )
+can_attack = true
+
+[node name="keeper6" parent="Keepers" groups=[ "keeper" ] instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 112, 162.5 )
+can_attack = true
+
+[node name="keeper7" parent="Keepers" groups=[ "keeper" ] instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 80, 162.5 )
+can_attack = true
+
+[node name="keeper8" parent="Keepers" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 75, 257 )
+can_attack = true
+
+[node name="keeper9" parent="Keepers" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 115, 257 )
+can_attack = true
+
+[node name="keeper10" parent="Keepers" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 155, 257 )
+can_attack = true
+
+[node name="keeper11" parent="Keepers" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 379, 145 )
+can_attack = true
+
+[node name="Player" parent="." instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 219.5, 210 )
+
+[node name="spinning_wheel" type="Sprite" parent="."]
+
+transform/pos = Vector2( 87.9716, 7.97158 )
+transform/scale = Vector2( 0.0568384, 0.0568384 )
+texture = ExtResource( 7 )
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="spinning_wheel" parent="HUD" instance=ExtResource( 8 )]
+
+visibility/visible = false
+transform/pos = Vector2( 400, 245 )
+transform/scale = Vector2( 1.5, 1.5 )
+
+[node name="Dialog" parent="HUD" instance=ExtResource( 9 )]
+
+visibility/visible = false
+margin/left = 320.0
+margin/top = 136.0
+margin/right = 4.0
+margin/bottom = 76.0
+
+[node name="Wizard2" parent="." groups=[ "interactive" ] instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 48, 32 )
+
+[node name="Spawn" type="Position2D" parent="."]
+
+transform/pos = Vector2( 384, -120.5 )
+
+[node name="Success" type="Position2D" parent="."]
+
+transform/pos = Vector2( 24, -87 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+transform/pos = Vector2( 24, -124 )
+transform/scale = Vector2( 1, 0.625 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = f
