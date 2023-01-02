@@ -99,4 +99,114 @@ trigger = false
 
 transform/pos = Vector2( 64, 6 )
 texture = ExtResource( 1 )
-region = 
+region = true
+region_rect = Rect2( 63, 0, 64, 48 )
+
+[node name="StaticBody2D1" type="StaticBody2D" parent="house2"]
+
+transform/pos = Vector2( 0.0921326, 0 )
+input/pickable = false
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1.495, 0, 0, 1, -2.43173, 8.71702 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="house2/StaticBody2D1"]
+
+transform/pos = Vector2( -2.43173, 8.71702 )
+transform/scale = Vector2( 1.495, 1 )
+build_mode = 0
+polygon = Vector2Array( -19.8398, -32.717, -19.8398, 15.283, 22.9697, 15.283, 22.9697, -32.717 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="house3" type="Sprite" parent="." groups=[ "destructable" ]]
+
+transform/pos = Vector2( 128, 6 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 128, 0, 64, 48 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="house3"]
+
+transform/pos = Vector2( 0, -8 )
+input/pickable = false
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1.495, 0, 0, 1, -2.43173, 8.71702 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="house3/StaticBody2D2"]
+
+transform/pos = Vector2( -2.43173, 8.71702 )
+transform/scale = Vector2( 1.495, 1 )
+build_mode = 0
+polygon = Vector2Array( -19.7781, -24.717, -19.7781, 23.283, 23.0313, 23.283, 23.0313, -24.717 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="house4" type="Sprite" parent="." groups=[ "destructable" ]]
+
+transform/pos = Vector2( 192, 6 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 192, 0, 64, 48 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="house4" groups=[ "destructable" ]]
+
+transform/pos = Vector2( 0.409424, 0.19371 )
+input/pickable = false
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1.495, 0, 0, 1, -2.43173, 8.71702 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="house4/StaticBody2D2"]
+
+transform/pos = Vector2( -2.43173, 8.71702 )
+transform/scale = Vector2( 1.495, 1 )
+build_mode = 0
+polygon = Vector2Array( -20.052, -32.9107, -20.052, 15.0893, 22.7574, 15.0893, 22.7574, -32.9107 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="floor1" type="Sprite" parent="."]
+
+transform/pos = Vector2( -24, 38 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 320, 192, 16, 16 )
+
+[node name="floor2" type="Sprite" parent="."]
+
+transform/pos = Vector2( -8, 38 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 336, 192, 16, 16 )
+
+[node name="floor3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 8, 38 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 352, 192, 16, 16 )
+
+[node name="floor4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 8, 54 )
+texture = ExtReso
