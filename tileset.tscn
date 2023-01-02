@@ -1,0 +1,102 @@
+[gd_scene load_steps=14 format=1]
+
+[ext_resource path="res://tileset.png" type="Texture" id=1]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 23.0313, -32.717, 23.0313, 15.283, -19.7781, 15.283, -19.7781, -32.717 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 22.9697, -32.717, 22.9697, 15.283, -19.8398, 15.283, -19.8398, -32.717 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 23.0313, -24.717, 23.0313, 23.283, -19.7781, 23.283, -19.7781, -24.717 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 22.7574, -32.9107, 22.7574, 15.0893, -20.052, 15.0893, -20.052, -32.9107 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -16, -16, 16, -16, 16, 16, -16, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=9]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -16, -16, 16, -16, 16, 16, -16, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=10]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="ConvexPolygonShape2D" id=11]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -4, -3, 4, -3, 4, 4, -4, 4 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -16, -16, 16, -16, 16, 16, -16, 16 )
+
+[node name="Node2D" type="Node2D"]
+
+transform/pos = Vector2( 192, 82 )
+
+[node name="house1" type="Sprite" parent="." groups=[ "destructable" ]]
+
+transform/pos = Vector2( 0, 6 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 0, 0, 64, 48 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="house1"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1.495, 0, 0, 1, -2.43173, 8.71702 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="house1/StaticBody2D"]
+
+transform/pos = Vector2( -2.43173, 8.71702 )
+transform/scale = Vector2( 1.495, 1 )
+build_mode = 0
+polygon = Vector2Array( -19.7781, -32.717, -19.7781, 15.283, 23.0313, 15.283, 23.0313, -32.717 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="house2" type="Sprite" parent="." groups=[ "destructable" ]]
+
+transform/pos = Vector2( 64, 6 )
+texture = ExtResource( 1 )
+region = 
