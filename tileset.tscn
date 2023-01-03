@@ -209,4 +209,128 @@ region_rect = Rect2( 352, 192, 16, 16 )
 [node name="floor4" type="Sprite" parent="."]
 
 transform/pos = Vector2( 8, 54 )
-texture = ExtReso
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 352, 208, 16, 16 )
+
+[node name="floor5" type="Sprite" parent="."]
+
+transform/pos = Vector2( -8, 54 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 336, 208, 16, 16 )
+
+[node name="floor6" type="Sprite" parent="."]
+
+transform/pos = Vector2( -24, 54 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 320, 208, 16, 16 )
+
+[node name="floor7" type="Sprite" parent="."]
+
+transform/pos = Vector2( -24, 70 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 320, 223, 16, 16 )
+
+[node name="floor8" type="Sprite" parent="."]
+
+transform/pos = Vector2( -8, 70 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 336, 223, 16, 16 )
+
+[node name="floor9" type="Sprite" parent="."]
+
+transform/pos = Vector2( 8, 70 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 352, 223, 16, 16 )
+
+[node name="floor10" type="Sprite" parent="."]
+
+transform/pos = Vector2( 24, 38 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 416, 176, 16, 16 )
+
+[node name="floor11" type="Sprite" parent="."]
+
+transform/pos = Vector2( 40, 38 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 432, 176, 16, 16 )
+
+[node name="floor12" type="Sprite" parent="."]
+
+transform/pos = Vector2( 56, 38 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 288, 176, 16, 16 )
+
+[node name="floor13" type="Sprite" parent="."]
+
+transform/pos = Vector2( 72, 38 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 304, 176, 16, 16 )
+
+[node name="floor14" type="Sprite" parent="." groups=[ "destructable" ]]
+
+editor/display_folded = true
+transform/pos = Vector2( 24, 54 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 304, 224, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="floor14" groups=[ "destructable" ]]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="floor14/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="floor15" type="Sprite" parent="."]
+
+transform/pos = Vector2( -24, 86 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 288, 96, 16, 16 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="floor15"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="floor15/StaticBody2D2"]
+
+build_mode = 0
+polygon = Vector2Array( -8, 8, 8, 8, 8, -8, -8, -8 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="floor16" type="Sprite" parent="."]
+
+transform
