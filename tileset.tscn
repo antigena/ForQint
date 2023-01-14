@@ -1051,3 +1051,122 @@ shape_range = Vector2( 0, 0 )
 trigger = false
 
 [node name="prop2" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 96, 94 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 112, 128, 32, 32 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="prop2" groups=[ "destructable" ]]
+
+input/pickable = false
+shapes/0/shape = SubResource( 9 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="prop2/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -16, 16, 16, 16, 16, -16, -16, -16 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="house_floor1" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 120, 86 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 112, 480, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="house_floor1"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 10 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="house_floor1/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -8, 8, 8, 8, 8, -8, -8, -8 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="house_floor2" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 136, 86 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 128, 480, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="house_floor2"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 10 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="house_floor2/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -8, 8, 8, 8, 8, -8, -8, -8 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="house_floor3" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 152, 86 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 144, 480, 16, 16 )
+__meta__ = { "_edit_group_":true }
+
+[node name="StaticBody2D" type="StaticBody2D" parent="house_floor3"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="house_floor3/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -8, 8, 8, 8, 8, -8, -8, -8 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="house_floor4" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 168, 86 )
+texture = ExtResource( 1 )
+region = true
+region_rect = R
