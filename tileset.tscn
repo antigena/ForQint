@@ -1976,4 +1976,121 @@ polygon = Vector2Array( -8, 8, 8, 8, 8, -8, -8, -8 )
 shape_range = Vector2( 0, 0 )
 trigger = false
 
-[node name="house_split
+[node name="house_split1" type="Sprite" parent="."]
+
+editor/display_folded = true
+visibility/opacity = 0.99
+transform/pos = Vector2( -24, 182 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 64, 0, 16, 16 )
+__meta__ = { "_edit_group_":true }
+
+[node name="StaticBody2D" type="StaticBody2D" parent="house_split1"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="house_split1/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -8, 8, 8, 8, 8, -8, -8, -8 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="house_split2" type="Sprite" parent="."]
+
+editor/display_folded = true
+visibility/opacity = 0.99
+transform/pos = Vector2( -8, 182 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 80, 0, 16, 16 )
+__meta__ = { "_edit_group_":true }
+
+[node name="StaticBody2D" type="StaticBody2D" parent="house_split2"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="house_split2/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -8, 8, 8, 8, 8, -8, -8, -8 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="house_split3" type="Sprite" parent="."]
+
+editor/display_folded = true
+visibility/opacity = 0.99
+transform/pos = Vector2( 8, 182 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 112, 0, 16, 16 )
+__meta__ = { "_edit_group_":true }
+
+[node name="StaticBody2D" type="StaticBody2D" parent="house_split3"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="house_split3/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -8, 8, 8, 8, 8, -8, -8, -8 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="house_split4" type="Sprite" parent="."]
+
+editor/display_folded = true
+visibility/opacity = 0.99
+transform/pos = Vector2( 8, 198 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 112, 16, 16, 16 )
+__meta__ = { "_edit_group_":true }
+
+[node name="StaticBody2D" type="StaticBody2D" parent="house_split4"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="house_split4/StaticBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( -8, 8, 8, 8, 8, -8, -8, -8 )
+shape_range =
